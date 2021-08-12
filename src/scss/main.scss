@@ -412,6 +412,7 @@ main{
 		#services{
 			background-color: rgba(0, 0, 0, 0.452);
 			background-blend-mode: color;
+			background-size: cover;
 			width: 93vw;
 			height: 50vh;
 			background-position: center;
@@ -435,20 +436,24 @@ main{
 				// height: 33.33vh;
 				// margin:.5em;
 				&:nth-of-type(1) {
-					width: 40vw;
+					width: 45vw;
+    				margin-left: 3em;
 					height: 70vh;
 					background-size: cover;
 					border-radius:1em;
 				
 				}
 				&:nth-of-type(2) {
-					width: 40vw;
+					width: 45vw;
 					border-radius:1em;
 				
 				}
 				&:nth-of-type(3) {
-					width: 40vw;
-					border-radius:1em;
+					// width: 40vw;
+					// border-radius:1em;
+					width: 45vw;
+    				border-radius: 1em;
+    				margin-right: 4em;
 				
 				}
 
@@ -523,7 +528,7 @@ main{
 				}
 			}
 			@include mixins.bp-large{
-				grid-column: 2/4;
+				grid-column: 1/4;
 				grid-row: 1/12;
 			}	
 		}
@@ -555,7 +560,7 @@ main{
 
 			}
 			@include mixins.bp-large{
-				grid-column: 8/11;
+				grid-column: 9/11;
 			}
 			
 			div{
@@ -593,6 +598,9 @@ main{
 				margin-top: 5em;
 					width: 25vw;
 					justify-self: center;
+					&:nth-of-type(3){
+						margin-top:3em;
+					}
 			}
 			img{
 				width:15em;
@@ -717,7 +725,7 @@ main{
 			// grid-template-columns: repeat(2,1fr);
 			justify-self: center;
 			width:80vw;
-			margin-left:5.5em;
+			margin-left:3.3em;
 		}
 		
 		figure{
@@ -733,7 +741,7 @@ main{
 				
 			}
 			@include mixins.bp-large{
-				width: 28vw;
+				width: 29vw;
 				// margin: 1em auto;
 				
 			}
@@ -747,7 +755,7 @@ main{
 					width: 48vw;
 				}
 				@include mixins.bp-large{
-					width: 28vw;
+					width: 29vw;
 					
 				}
 			}
