@@ -22,7 +22,7 @@
 			</a>
 			<div class="header-menu">
 				<input type="checkbox" id="header-menu" /> 
-				<label for="header-menu" class="nike-menu">
+				<label for="header-menu" aria-label="menu" tabindex="1">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -39,11 +39,11 @@
 			</div>
 		</header>
 		<section class="hero-container">
-			<div class="hero-container__container">
-				<h1>Award-winning custom digital synergistic overflow solutions</h1>
+			<div class="hero-container__container" role="#" aria-labelledby="hero">
+				<h1 id="hero">Award-winning custom digital synergistic overflow solutions</h1>
 				<label>We are experienced in authoritatively orchestrating timely interfaces, proactively visualizing process-centric adoption of B2C communities, and impacting cloud-ready services.
 					
-				</label>
+				</label>	
 				<input class="hero-container__btn" type="button" value="learn More">
 				<div class="hero-container__img"></div>
 			</div>
@@ -51,82 +51,106 @@
 		</section>
 		<main class="main-container">
 			<section class="projects-container">
-				<div id="services" class="projects-container__webDesign divContainer">
-					<div>
-						<label for="web-design">web design</label>
-						<a href="webDesign.html">view projects <span>></span></a>
-					</div>	
-				</div>
-				<div id="services" class="projects-container__appDesign">
-					<div>
-						<label for="app-design">app design</label>
-						<a href="#">view projects <span>></span></a>
-					</div>	
-				</div>
-				<div id="services" class="projects-container__graphicDesign">
-					<div class="projects-container__div">
-						<label for="graphic-design">graphic design</label>
-						<a href="#">view projects <span>></span></a>
-					</div>	
-				</div>
+					<a href="webDesign.html" class="projects">
+						<figure>
+							<h2>web design</h2>
+							<span class="prjects-a">view projects <span class="arrow" aria-hidden="true">></span></span>
+						</figure>
+					</a>
+					<a href="#" class="projects">
+						<figure>
+							<h2>app design</h2>
+							<span class="prjects-a">view projects <span class="arrow" aria-hidden="true">></span></span>
+						</figure>
+					</a>
+					<a href="#" class="projects">
+						<figure>
+							<h2>graphic design</h2>
+							<span class="prjects-a">view projects <span class="arrow" aria-hidden="true">></span></span>
+						</figure>
+					</a>		
 			</section>
 			<section class="expertise-container">
-				<figure id="expertise" class="expertise-container__figureOne">
-					<img src="/dist/img/Group 5.png" alt="image-of-man-and-woman-looking-at-computer">
-					<figcaption><span>facilitation</span> </br> Our alignment development lifecycle enables holistic, value-added standpoints. So we can hit the ground running, we will be dynamically investing every synergy in our space. </figcaption>
-				</figure>
-				<figure id="expertise" class="expertise-container__figureTwo">
-					<img src="/dist/img/Group 4.png" alt="figure-sitting-on-box">
-					<figcaption><span>reinvention</span> </br> Efficiencies will come from effectively deep-diving our paradigm shifts. Efficiencies will come from proactively leveraging our big data.
-						Knowledge transfer market foci. </figcaption>
-				</figure>
-				<figure id="expertise" class="expertise-container__figureThree">
-					<img src="/dist/img/Group 3.png" alt="cute-creatures-surrounding-the-globe">
-					<figcaption><span>handshakefulness</span> </br> We aim to virtually synergise our team player by reliably relaying our end-to-end actionable clouds. You need to ethically virtualise your executive searches to increase your proposition velocity.</figcaption>
-				</figure>
+				<div role="#" aria-labelledby="fig1">
+						<figure  id="fig1" class="expertise-container__figureOne figure">
+							<img src="/dist/img/Group 5.png" alt="image-of-man-and-woman-looking-at-computer">
+							<figcaption><span>facilitation</span> </br> Our alignment development lifecycle enables holistic, value-added standpoints. So we can hit the ground running, we will be dynamically investing every synergy in our space. </figcaption>
+						</figure>
+				</div>
+				<div role="#" aria-labelledby="fig2">
+					<figure id="fig2" class="expertise-container__figureTwo figure">
+						<img src="/dist/img/Group 4.png" alt="figure-sitting-on-box">
+						<figcaption><span>reinvention</span> </br> Efficiencies will come from effectively deep-diving our paradigm shifts. Efficiencies will come from proactively leveraging our big data.
+							Knowledge transfer market foci. </figcaption>
+					</figure>
+				</div>
+				<div role="#" aria-labelledby="fig3">
+					<figure id="fig3" class="expertise-container__figureThree figure">
+						<img src="/dist/img/Group 3.png" alt="cute-creatures-surrounding-the-globe">
+						<figcaption><span>handshakefulness</span> </br> We aim to virtually synergise our team player by reliably relaying our end-to-end actionable clouds. You need to ethically virtualise your executive searches to increase your proposition velocity.</figcaption>
+					</figure>
+				</div>	
 			</section>
-			<section class="innovations-container">
-				<div>
-					<label for="immersive-innovations">
+			<section class="innovations-container" role="#" aria-labelledby="contact">
+				<div id="contact">
+					<h2 for="immersive-innovations">
 						Let's collaborate on immersive immersive-innovations
 						
-					</label>
+					</h2>
 					<p>You need to dynamically connect your low hanging fruit to increase your driver velocity.</p>
-					<button type="submit">get in touch</button>
-				</div>	
+					
+				</div>
+				<button type="submit">get in touch</button>	
 			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer-container">
-				<figure class="footer-container__img">
-					<img src="/dist/img/Group -6.png" alt="big-top-logo">
-					<figcaption>big top</figcaption>
-				</figure>
-				<ul class="footer-container__ul">
-					<li><a href="">about us</a></li>
-					<li><a href="">serivce</a></li>
-					<li><a href="">contact</a></li>	
-				</ul>
-				<div class="footer-container__location footer-info">
-					<h4>Big Top Central Office</h4>
-					<li>812 Lambert Drive</li>
-					<li>Atlana, Georgia 30324</li>
+				<div class="footer-container__flex">
+					<figure class="footer-container__img">
+						<img src="/dist/img/Group -6.png" alt="big-top-logo">
+						<figcaption>big top</figcaption>
+					</figure>
+					<div role="#" aria-labelledby="menu" class="footer-menu">
+						<nav id="menu" aria-label="menu">
+							<ul class="footer-container__ul">
+								<li><a href="">about us</a></li>
+								<li><a href="">service</a></li>
+								<li><a href="">contact</a></li>	
+							</ul>
+						</nav>
+					</div>
 				</div>
-				<div class="footer-container__contact footer-info">
-					<h4>Contact Us (Central Office)</h4>
-					<li>P : +1 404-477-6700</li>
-					<li>M : contact@example.com</li>
+				<div div class="footer-container__flex">
+					<div class="contact">
+						<div class="footer-container__location footer-info">
+							<h4>Big Top Central Office</h4>
+							<li>812 Lambert Drive</li>
+							<li>Atlana, Georgia 30324</li>
+						</div>
+						<div class="footer-container__contact footer-info">
+							<h4>Contact Us (Central Office)</h4>
+							<li>P : +1 404-477-6700</li>
+							<li>M : contact@example.com</li>
+						</div>
+					</div>
+					
+					<div role="#" aria-labelledby="social" class="footer-social">
+						<nav id="social" aria-label="social-media">
+							<ul class="footer-container__socials">
+								<li><a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#" aria-label="pinterest"><i class="fab fa-pinterest"></i></a></li>
+								<li><a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</nav>
+					</div>	
 				</div>
-				<ul class="footer-container__socials">
-					<li aria-label="facebook"><i class="fab fa-facebook-square"></i></li>
-					<li aria-label="youtube"><i class="fab fa-youtube"></i></li>
-					<li aria-label="twitter"><i class="fab fa-twitter"></i></li>
-					<li aria-label="pinterest"><i class="fab fa-pinterest"></i></li>
-					<li aria-label="instagram"><i class="fab fa-instagram"></i></li>
-				</ul>
+				
+				
+				
+					
 			</div>
-			
-
 		</footer>
 		
 

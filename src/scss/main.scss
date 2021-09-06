@@ -36,12 +36,6 @@ background: variables.$primary-color;
 body {
 	background: white;
 	font-family: 'Jost', sans-serif;
-	
-	// @include mixins.bp-medium{
-	// 	background-image: url(/dist/img/Rectangle.png);
-	// 	background-repeat: no-repeat;
-	// 	background-size: contain;
-	// }
 }
 
 /* 2. Content ================================= */
@@ -110,7 +104,10 @@ header{
 		}
 		
 		#header-menu{
-			display: none;
+			opacity: 0;
+			position: absolute;
+    		top: 45%;
+    		right: 45%;
 		}
 			
 		label {
@@ -168,6 +165,7 @@ header{
 			height: 0vh;
 			transition:  .5s;
 			overflow: hidden;
+			visibility: hidden;
 			@include mixins.bp-medium{
 				overflow: visible;
 				top: 35%;
@@ -224,6 +222,7 @@ header{
 		#header-menu:checked ~ nav {
 			display: block;
 			height: 35vh;
+			visibility: visible;
 		}
 	}
 
@@ -343,7 +342,7 @@ header{
 				}
 			}
 	}
-	#web-design{
+	.webDesign{
 		height: unset;
 		@include mixins.bp-medium{
 			height: 30vh;
@@ -381,246 +380,243 @@ header{
 main{
 	background: variables.$white;
 	// height: 110vh;
-
+	.projects{
+		cursor: pointer;
+	}
 	.projects-container{
 		
 		display: grid;
-		grid-template-columns: 1em 1fr  1em;
+		// grid-template-columns: 1em 1fr  1em;
 		margin-top: 2em;
+		margin: 1em;
 		// grid-template-rows: 3em 1fr 1fr 1fr 1em;
 		@include mixins.bp-medium{
 			margin-top: 1em;
 			grid-template-columns:  repeat(6,1fr) ;
-			grid-template-rows: repeat(2,1fr) ;
 			margin-top: 3em;
+			grid-column-gap:1em ;
+			grid-row-gap:1em ;
+			margin: 3em;
 		}
 		@include mixins.bp-large{
-			margin-top: 1em;
-			grid-template-columns:  repeat(12,1fr) ;
 			grid-template-rows: repeat(2,1fr) ;
 			margin-top: 3em;
-		
+			grid-column-gap:1em ;
+			grid-row-gap:1em ;
+
 		}
-		// &:nth-child(1){
-		// 	&__webDesign{
-		// 		margin:5 auto;
-		// 	}
+		
 				
-			
-		// }
-
-		#services{
-			background-color: rgba(0, 0, 0, 0.452);
-			background-blend-mode: color;
-			background-size: cover;
-			width: 93vw;
-			height: 50vh;
-			background-position: center;
-			background-repeat: no-repeat;
-			border-radius: 1em;
-			position: relative;
-			margin-bottom: 2em;
-			@include mixins.bp-medium{
-				width:33.33vw;
-				height: 33.33vh;
-				margin:.5em;
-				&:nth-of-type(3) {
-					width: 70vw;
-					border-radius:1em;
-				
-				}
-
-			}
-			@include mixins.bp-large{
-				width:40vw;
-				// height: 33.33vh;
-				// margin:.5em;
-				&:nth-of-type(1) {
-					width: 45vw;
-    				margin-left: 3em;
-					height: 70vh;
-					background-size: cover;
-					border-radius:1em;
-				
-				}
-				&:nth-of-type(2) {
-					width: 45vw;
-					border-radius:1em;
-				
-				}
-				&:nth-of-type(3) {
-					// width: 40vw;
-					// border-radius:1em;
-					width: 45vw;
-    				border-radius: 1em;
-    				margin-right: 4em;
-				
-				}
-
-			}
-
-			div{
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				// display: block;
-    			margin-left: auto;
-    			margin-right: auto;
+		.projects{
+				background: url(/dist/img/webDesign.jpg);
+				background-color: rgba(0, 0, 0, 0.452);
+				background-blend-mode: color;
+				background-size: cover;
+				text-decoration: none;
+				height: 50vh;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 1em;
 				position: relative;
-				margin: 12em auto;
-				
+				margin-bottom: 2em;
 				@include mixins.bp-medium{
-					margin: 7em auto;
+					grid-column: 1/3;
+					grid-row: 1/ span 2;
+					height:50vh;
+					margin:0;
 				}
-				
-				
-
-				label{
-					color: variables.$white;
-					text-transform: uppercase;
-					font-size: 2.375em;
-					font-weight: 300;
-					letter-spacing: .1em;
-					margin-bottom: .5em;
-					
-					top:50%;
-	
+				@include mixins.bp-large{
+					grid-column: 1/4;
+					height:82vh;
+					margin:0;
 				}
-				a{
-					color:white;
-					font-size: 1em;
-					font-weight: 300;
-					text-decoration: none;
-					text-transform: uppercase;
-					letter-spacing: .3em;
-					transition: .5s ease-in-out;
-					
-					span{
-						color:variables.$blood;
-						font-weight: 600;
-						
+				figure{
+					margin-bottom: 2em;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					position: absolute;
+					top: 45%;
+					left: 30%;
+					@include mixins.bp-medium{
+						top: 45%;
+						left: 15%;
 					}
-					&:hover{
-						color:variables.$love;
-						transform: translate(10%);
+					@include mixins.bp-large{
+						top: 45%;
+						left: 35%;
+					}
+					h2{
+						color: variables.$white;
+						text-transform: uppercase;
+						font-size: 2.375em;
+						font-weight: 300;
 						@include mixins.bp-medium{
-							transform: translate(5%);
+							font-size: 2em;
+						}
+						@include mixins.bp-medium{
+							font-size: 2.375em;
 						}
 					}
+					span{
+						color:white;
+							font-size: 1em;
+							font-weight: 300;
+							text-decoration: none;
+							text-transform: uppercase;
+							letter-spacing: .3em;
+							transition: .5s ease-in-out;
+							background-color: transparent;
+							.arrow{
+								color: variables.$love;
+							}
+							&:hover{
+								color:variables.$love;
+								transform: translate(10%);
+								@include mixins.bp-medium{
+									transform: translate(5%);
+								}
+							}
+					}
+				}
+			&:nth-of-type(2){
+				background: url(/dist/img/appDesign.jpg);
+				background-color: rgba(0, 0, 0, 0.452);
+				background-blend-mode: color;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				@include mixins.bp-medium{
+					grid-column: 3/5;
+					grid-row: 1;
+					height: 50vh;
+					margin:0;
+				}
+				@include mixins.bp-large{
+					grid-column: 4/7;
+					grid-row: 1;
+					height: 40vh;
+					margin:0;
+				}
+				figure{
+					top: 45%;
+					left: 31%;
+					@include mixins.bp-medium{
+						top: 45%;
+						left: 15%;
+					}
+					@include mixins.bp-medium{
+						top: 46%;
+						left: 35%;
+					}
+					h2{
+						@include mixins.bp-medium{
+							font-size: 2em;
+						}
+						@include mixins.bp-large{
+							font-size: 2.375em;;
+						}
+					}
+				}
+			}
+			&:nth-of-type(3){
+				background: url(/dist/img/graphicDesign);
+				background-color: rgba(0, 0, 0, 0.452);
+				background-blend-mode: color;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				@include mixins.bp-medium{
+					grid-column: 5/7;
+					grid-row: 1;
+					height: 50vh;
+					margin:0;
+				}
+				@include mixins.bp-large{
+					grid-column: 4/7;
+					grid-row: 2;
+					height: 40vh;
+					margin:0;
 					
-	
+				}
+				figure{
+					top: 45%;
+					left: 23%;
+					@include mixins.bp-medium{
+						top: 46%;
+						left: 10%;
+					}
+					@include mixins.bp-medium{
+						top: 46%;
+						left: 30%;
+					}
+					h2{
+						@include mixins.bp-medium{
+							font-size: 1.7em;
+						}
+						@include mixins.bp-large{
+							font-size: 2.375em;;
+						}
+					}
 				}
 			}
-		}
-		&__webDesign{
-			background: url(/dist/img/webDesign.jpg);
-			grid-column: 2;
-			grid-row: 2;
-			@include mixins.bp-medium{
-				grid-column: 2/4;
-				grid-row: 1;
-				width:50vw;
-				label{
-					margin: 0 auto;
-				}
-				a{
-					margin: 0 auto;
-				}
-			}
-			@include mixins.bp-large{
-				grid-column: 1/4;
-				grid-row: 1/12;
-			}	
-		}
-		&__appDesign{
-			background: url(/dist/img/appDesign.jpg);
-			grid-column: 2;
-			grid-row: 3;
-			@include mixins.bp-medium{
-				grid-column: 5;
-				grid-row: 1;
-				width: 50vw;	
-			}
-			@include mixins.bp-large{
-				grid-column: 7/11;
-			}
-
-		}
-		&__graphicDesign{
-			grid-column: 2;
-			grid-row: 4;
-			background: url(/dist/img/graphicDesign);
-			@include mixins.bp-medium{
-				grid-column: 2/6;
-				grid-row: 2;
-				justify-self: center;
-				
-				// width: 100vw;
-				// height: 100vh;
-
-			}
-			@include mixins.bp-large{
-				grid-column: 9/11;
-			}
-			
-			div{
-				label{
-					text-align: center;
-					// margin:0 auto;
-					top: 25%;
-					left:0%;
-				}
-				
-			}
-		}
-		
+		}	
 
 	}
 	.expertise-container{
 		display: grid;
-		grid-template-columns: 2em 1fr 1fr 1fr 1fr 2em;
-		grid-template-rows: 3em 1fr 1fr 1fr 1em;
 		@include mixins.bp-medium{
 			margin-bottom: 2em;
 		}
 		@include mixins.bp-large{
 			margin-bottom: 2em;
+			
 			grid-template-columns: repeat(3,1fr);
 			grid-template-rows: 1fr;
 			justify-self: center;
 		}
 		
-		
-		#expertise{
-			justify-self: center;
-			text-align: center;
-			@include mixins.bp-large{
-				margin-top: 5em;
-					width: 25vw;
-					justify-self: center;
-					&:nth-of-type(3){
-						margin-top:3em;
-					}
-			}
-			img{
-				width:15em;
-			}
-			figcaption{
-				margin-top:1em;
-				font-size: 1em;
-				line-height: 2em;
-				font-weight: 300;
-
+		div{
+			
+			.figure{
+				justify-self: center;
+				text-align: center;
 				
-				span{
-					font-size: 1.25em;
-					text-transform: uppercase;
-					margin-bottom: 1em;
-					letter-spacing: .3em;
+				@include mixins.bp-large{
+					margin-top: 5em;
+						width: 25vw;
+						justify-self: center;
+						&:nth-of-type(3){
+							margin-top:3em;
+						}
 				}
+				img{
+					width:15em;
+				}
+				figcaption{
+					margin-top:1em;
+					font-size: 1em;
+					line-height: 2em;
+					font-weight: 300;
+					margin:1em;
+	
+					
+					span{
+						font-size: 1.25em;
+						text-transform: uppercase;
+						margin-bottom: 1em;
+						letter-spacing: .3em;
+					}
+					
+				}
+			}
+			&:nth-of-type(3){
+				margin-top:-1em;
 				
 			}
 		}
+		
+		
 		&__figureOne{
 			grid-column: 2/6;
 			grid-row: 2;
@@ -629,6 +625,7 @@ main{
 				grid-column: 1;
 				grid-row: 1;
 				margin-left:2em;
+				// margin-right:1em ;
 			}	
 		}
 		&__figureTwo{
@@ -636,6 +633,7 @@ main{
 			grid-row: 3;
 			margin-top:2em;
 			@include mixins.bp-large{
+				margin-left:2em;
 				margin-top: unset;
 				grid-column: 2;
 				grid-row: 1;
@@ -647,6 +645,7 @@ main{
 			margin-top:2em;
 			margin-bottom:2em;
 			@include mixins.bp-large{
+				margin-left:2em;
 				margin-top: unset;
 				grid-column: 3;
 				grid-row: 1;
@@ -655,13 +654,16 @@ main{
 		
 	}
 	.innovations-container{
-		display: grid;
-		grid-template-columns: 2em 1fr 1fr 1fr 1fr 2em;
-		grid-template-rows:  1fr;
+		display: flex;
+		flex-direction: column;
+    	align-content: space-around;
+    	align-items: center;
+		// grid-template-columns: 2em 1fr 1fr 1fr 1fr 2em;
+		// grid-template-rows:  1fr;
 		margin-top: 2em;
 		@include mixins.bp-large{
-			grid-template-columns:repeat(12,1fr) ;
-			grid-template-rows:  1fr 1fr;
+			// grid-template-columns:repeat(12,1fr) ;
+			// grid-template-rows:  1fr 1fr;
 			// grid-template-rows:3em 1fr 1fr 3em;
 			
 		}
@@ -674,12 +676,14 @@ main{
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			width: 90vw;
+			height: 30vh;
 			@include mixins.bp-large{
-				width: 75vw;
+				width: 88vw;
     			margin: 0px auto;
 				
 			}
-			label{
+			h2{
 				color: variables.$white;
 				font-size: 2em;
 				text-align: center;
@@ -695,98 +699,274 @@ main{
 				line-height: 1.5em;
 				margin: 2em 2em;
 			}
-			button{
-				color: black;
-				text-transform: uppercase;
-				width:10em;
-				padding: 1em;
-				border-radius: .5em;
-				border:none;
-				margin-bottom: 3em;
-			}
+			
+		}
+		button{
+			color: black;
+			text-transform: uppercase;
+			width:10em;
+			padding: 1em;
+			border-radius: .5em;
+			border:none;
+			margin-bottom: 3em;
+			margin-top: -5em;
 		}
 		
 	}
 	//web design page
 	.site-container{
+		display: flex;
+    	flex-direction: column;
 		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr;
-		
-		margin: 1em 1em .5em .5em;
+    	justify-content: space-evenly;
+		align-items: center;
+		margin-top: 3em;
 		@include mixins.bp-medium{
-			display: grid;
-			grid-template-columns: repeat(2,1fr);
-			// grid-column-gap:.2em;
-		}
-		@include mixins.bp-large{
-			
-			grid-template-columns: repeat(3, 1fr);
-			// grid-template-columns: repeat(2,1fr);
-			justify-self: center;
-			width:80vw;
-			margin-left:3.3em;
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 		
-		figure{
-			background:#FDF0F0;
-			margin-bottom: 1em;
-			border-radius: 1em;
-			width: 96vw;
-			margin-right:2em;
-			// height: 60vh;
-			@include mixins.bp-medium{
-				width: 48vw;
-				justify-self: center;
+		a{
+			text-decoration: none;
+			color: black;
+			figure{
+				background:#FDF0F0;
+				margin-bottom: 3em;
+				border-radius: 1em;
 				
-			}
-			@include mixins.bp-large{
-				width: 29vw;
-				// margin: 1em auto;
-				
-			}
-			img{
 				width: 96vw;
-				// height: 50vh;
-				text-align: center;
-				border-top-right-radius:1em;
-				border-top-left-radius: 1em;
+				
 				@include mixins.bp-medium{
 					width: 48vw;
+					justify-self: center;
+					
 				}
 				@include mixins.bp-large{
 					width: 29vw;
+					// margin: 1em auto;
 					
 				}
-			}
-			figcaption{
-				margin-top:1em;
-				font-size: 1em;
-				line-height: 2em;
-				font-weight: 300;
-				// background:#FDF0F0;
-				text-align: center;
-				display: flex;
-				flex-direction: column;
-				padding: 1em;
-				
-				
-				
-				span{
-					color:variables.$love;
-					font-size: 1.5em;
-					text-transform: uppercase;
-					letter-spacing: .3em;
-					font-weight: 400;
+				img{
+					width: 96vw;
+					// height: 50vh;
+					text-align: center;
+					border-top-right-radius:1em;
+					border-top-left-radius: 1em;
+					@include mixins.bp-medium{
+						width: 48vw;
+					}
+					@include mixins.bp-large{
+						width: 29vw;
+						
+					}
+				}
+				figcaption{
+					margin-top:1em;
+					font-size: 1em;
+					line-height: 2em;
+					font-weight: 300;
+					
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					padding: 1em;
+					
+					
+					
+					span{
+						color:variables.$love;
+						font-size: 1.5em;
+						text-transform: uppercase;
+						letter-spacing: .3em;
+						font-weight: 400;
+					}
+					
 				}
 				
+				
 			}
-			
-			// label{
-			// 	text-align: center;
-			// 	font-weight: 300;
-			// }
 		}
+		
+	}
+	.projects-container__web{
+		display: grid;
+		// grid-template-columns: 1em 1fr  1em;
+		margin-top: 2em;
+		
+		// margin: 1em 2em 0em 2em;
+		// grid-template-rows: 3em 1fr 1fr 1fr 1em;
+		@include mixins.bp-medium{
+			margin-top: 1em;
+			grid-template-columns:  repeat(6,1fr) ;
+			margin-top: 3em;
+			grid-column-gap:1em ;
+			grid-row-gap:1em ;
+			margin: 4em;
+		}
+		@include mixins.bp-large{
+			
+			margin-top: 3em;
+			grid-column-gap:1em ;
+			grid-row-gap:1em ;
+
+		}
+		
+				
+		.projects{
+				background: url(/dist/img/webDesign.jpg);
+				background-color: rgba(0, 0, 0, 0.452);
+				background-blend-mode: color;
+				background-size: cover;
+				text-decoration: none;
+				height: 50vh;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 1em;
+				position: relative;
+				margin-bottom: 2em;
+				@include mixins.bp-medium{
+					grid-column: 1/4;
+					
+					height:50vh;
+					margin:0;
+				}
+				@include mixins.bp-large{
+					grid-column: 1/4;
+					grid-row: 1/ span 2;
+					height:40vh;
+					margin:0;
+				}
+				figure{
+					margin-bottom: 2em;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					position: absolute;
+					top: 45%;
+					left: 30%;
+					@include mixins.bp-medium{
+						top: 45%;
+						left: 15%;
+					}
+					@include mixins.bp-large{
+						top: 45%;
+						left: 30%;
+					}
+					h2{
+						color: variables.$white;
+						text-transform: uppercase;
+						font-size: 2.375em;
+						font-weight: 300;
+						@include mixins.bp-medium{
+							font-size: 2em;
+						}
+						@include mixins.bp-medium{
+							font-size: 2.375em;
+						}
+					}
+					span{
+						color:white;
+							font-size: 1em;
+							font-weight: 300;
+							text-decoration: none;
+							text-transform: uppercase;
+							letter-spacing: .3em;
+							transition: .5s ease-in-out;
+							background-color: transparent;
+							.arrow{
+								color: variables.$love;
+							}
+							&:hover{
+								color:variables.$love;
+								transform: translate(10%);
+								@include mixins.bp-medium{
+									transform: translate(5%);
+								}
+							}
+					}
+				}
+			&:nth-of-type(2){
+				background: url(/dist/img/appDesign.jpg);
+				background-color: rgba(0, 0, 0, 0.452);
+				background-blend-mode: color;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				@include mixins.bp-medium{
+					grid-column: 4/7;
+					grid-row: 1;
+					height: 50vh;
+					margin:0;
+				}
+				@include mixins.bp-large{
+					grid-column: 4/7;
+					// grid-row: 1/ span 2;
+					height:40vh;
+					margin:0;
+				}
+				figure{
+					top: 45%;
+					left: 31%;
+					@include mixins.bp-medium{
+						top: 45%;
+						left: 15%;
+					}
+					@include mixins.bp-medium{
+						top: 46%;
+						left: 22%;
+					}
+					h2{
+						@include mixins.bp-medium{
+							font-size: 2em;
+						}
+						@include mixins.bp-large{
+							font-size: 2.375em;;
+						}
+					}
+				}
+			}
+			// &:nth-of-type(3){
+			// 	background: url(/dist/img/graphicDesign);
+			// 	background-color: rgba(0, 0, 0, 0.452);
+			// 	background-blend-mode: color;
+			// 	background-size: cover;
+			// 	background-position: center;
+			// 	background-repeat: no-repeat;
+			// 	@include mixins.bp-medium{
+			// 		grid-column: 5/7;
+			// 		grid-row: 1;
+			// 		height: 50vh;
+			// 		margin:0;
+			// 	}
+			// 	@include mixins.bp-large{
+			// 		grid-column: 4/7;
+			// 		grid-row: 2;
+			// 		height: 40vh;
+			// 		margin:0;
+					
+			// 	}
+			// 	figure{
+			// 		top: 45%;
+			// 		left: 23%;
+			// 		@include mixins.bp-medium{
+			// 			top: 46%;
+			// 			left: 10%;
+			// 		}
+			// 		@include mixins.bp-medium{
+			// 			top: 46%;
+			// 			left: 30%;
+			// 		}
+			// 		h2{
+			// 			@include mixins.bp-medium{
+			// 				font-size: 1.7em;
+			// 			}
+			// 			@include mixins.bp-large{
+			// 				font-size: 2.375em;;
+			// 			}
+			// 		}
+			// 	}
+			// }
+		}	
 	}
 	.portfolio-container{
 		display: grid;
@@ -954,22 +1134,37 @@ main{
 footer{
 	background: variables.$black;
 	margin-top: -10em;
-	// &::after{
-	// content: "";
-	// width:5em;
-	// height: 1em;
-	// color:white;	
-	// }
+	padding-bottom: 5em;
 	.footer-container{
-		display: grid;
-		grid-template-columns:repeat(1,1fr) ;
-		
-		@include mixins.bp-large{
-			grid-template-columns:repeat(12,1fr) ;
-			grid-template-rows:3em 1fr 1fr 3em;
+		padding-top: 1em;
+		display: flex;
+		flex-direction: column;
+	
+		&__flex{
+			@include mixins.bp-large{
+				
+				display: flex;
+    			align-items: flex-end;
+    			justify-content: space-around;
+			}
+			&:nth-of-type(2){
+				@include mixins.bp-large{
+					.contact{
+						display: flex;
+						flex-direction: row;
+						margin-right:1em;
+						div{
+							margin-left:1em;
+						}
+						
+					}
+					.footer-social{
+						margin-right: 9em;
+					}
+				}
+				
+			}
 		}
-		
-		
 
 		figure{
 			display: flex;
@@ -979,9 +1174,8 @@ footer{
 			margin-top: 12em;
 			
 			@include mixins.bp-large{
+				padding-bottom: 1.75em;
 				
-				grid-row: 2;
-				grid-column: 5/1;
 			}
 			figcaption{
 				color:variables.$darkGrey;
@@ -992,39 +1186,44 @@ footer{
 			}
 	
 		}
-		&__ul{
-			margin:2em;
-			text-align: center;
-			
-
-			@include mixins.bp-large{
-				grid-row: 2;
-    			grid-column: 9/13;
-				align-self: flex-end;
-				display: flex;
-				flex-direction: row;
-				margin:0;
-			}
-			
-			li{
-				margin-bottom: 1em;
-				@include mixins.bp-large{
-					margin-bottom: 0;
-					margin-left:1em
-				}
-				a{
-					color: variables.$darkGrey;
-					text-decoration: none;
-					text-transform: uppercase;
-					letter-spacing: .3em;
-					font-weight: 300;
-					transition: .5s ease-in-out;
-					&:hover{
-						color:white;
+		.footer-menu{
+			nav{
+				
+				ul{
+					display: flex;
+					flex-direction: column;
+					margin-top:1em;
+					text-align: center;
+					@include mixins.bp-large{
+						margin-top: unset;
+						margin:2em;
+						flex-direction: row;
+					}
+					li{
+						margin-bottom: 1em;
+						@include mixins.bp-large{
+							margin-bottom: 0;
+							margin-left:1em
+						}
+						a{
+							color: variables.$darkGrey;
+							text-decoration: none;
+							text-transform: uppercase;
+							letter-spacing: .3em;
+							font-weight: 300;
+							transition: .5s ease-in-out;
+							&:hover{
+								color:white;
+							}
+						}
 					}
 				}
 			}
+			
 		}
+		
+		
+		
 		.footer-info{
 			text-align: center;
 			list-style: none;

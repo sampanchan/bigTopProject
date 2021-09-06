@@ -21,7 +21,7 @@
 			</a>
 			<div class="header-menu">
 				<input type="checkbox" id="header-menu" /> 
-				<label for="header-menu" class="nike-menu">
+				<label for="header-menu" aria-label="menu" tabindex="1">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -38,8 +38,8 @@
 			</div>
 		</header>
 		<section class="hero-container">
-			<div class="hero-container__container" id="web-design">
-				<h1>Web Design</h1>
+			<div class="hero-container__container webDesign" role="#" aria-labelledby="hero">
+				<h1 id="hero">Web Design</h1>
 				<label>Iterative approaches to corporate strategy foster collaborative thinking
                     to further the overall value proposition	
 				</label>
@@ -47,101 +47,141 @@
 		</section>
         <main>
             <section class="site-container">
-                <figure id= "website" class="site-container__figureOne">  
-                    <img src="/dist/img/computer1" alt="computer-iimage-with-cool-site">
-                    <figcaption><span>cool site</span>
-                        Podcasting operational change management inside of workflows to establish a framework.
-                    </figcaption>  
-                </figure>
-                <figure id= "website" class="site-container__figureTwo">  
-                    <img src="/dist/img/computer2" alt="computer-image-with-nice-site">
-                    <figcaption><span>fancy site</span>
-                        Taking seamless key performance indicators offline to maximize the long tail.
-                    </figcaption>  
-                </figure>
-                <figure id= "website" class="site-container__figureThree">  
-                    <img src="/dist/img/computer3" alt="computer-image-with-boring-site">
-                    <figcaption><span>boring site</span>
-                        Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
-                    </figcaption>  
-                </figure>
-                <figure id= "website" class="site-container__figureFour">  
-                    <img src="/dist/img/computer4" alt="person-drawing-wire-frames-for-site">
-                    <figcaption><span>nice site</span>
-                        Collaboratively administrate empowered markets via plug-and-play networks.
-                    </figcaption>  
-                </figure>
-                <figure id= "website" class="site-container__figureFive">  
-                    <img src="/dist/img/computer5" alt="man-sitting-infront-of-computer">
-                    <figcaption><span>wow site</span>
-                        Dynamically procrastinate B2C users after installed base benefits.
-                    </figcaption>  
-                </figure>
-                <figure id= "website" class="site-container__figureSix">  
-                    <img src="/dist/img/computer6" alt="computer-screen-showing-code">
-                    <figcaption><span>beautiful site</span>
-                        Dramatically visualize customer directed convergence without revolutionary ROI.
-                    </figcaption>  
-                </figure>
-			</section>
-            <section class="portfolio-container">
 				
-				<div id="projects" class="portfolio-container__appDesign">
-					<div>
-						<label for="app-design">app design</label>
-						<a href="#">view projects <span>></span></a>
-					</div>	
-				</div>
-				<div id="projects" class="portfolio-container__graphicDesign">
-					<div class="portfolio-container__div">
-						<label for="graphic-design">graphic design</label>
-						<a href="#">view projects <span>></span></a>
-					</div>	
-				</div>
-			</section>
+				<a href="#" role="#" aria-labelledby="fig1">
+					<figure  id= "fig1" class="site-container__figureOne">  
+						<img src="/dist/img/computer1" alt="computer-image">
+						<figcaption><span>cool site</span>
+							Podcasting operational change management inside of workflows to establish a framework.
+						</figcaption>  
+					</figure>
+				</a>
+				
+				<a href="#" role="#" aria-labelledby="fig2">
+					<figure id= "fig2" class="site-container__figureTwo">  
+						<img src="/dist/img/computer2" alt="computer-image">
+						<figcaption><span>fancy site</span>
+							Taking seamless key performance indicators offline to maximize the long tail.
+						</figcaption>  
+					</figure>
+				</a>
+				<a href="#" role="#" aria-labelledby="fig3">
+					<figure id= "fig3" class="site-container__figureThree">  
+						<img src="/dist/img/computer3" alt="computer-image">
+						<figcaption><span>boring site</span>
+							Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+						</figcaption>  
+					</figure>
+				</a>
+				<a href="#" role="#" aria-labelledby="fig4">
+					<figure id= "fig4" class="site-container__figureFour">  
+						<img src="/dist/img/computer4" alt="person-drawing-wire-frames">
+						<figcaption><span>nice site</span>
+							Collaboratively administrate empowered markets via plug-and-play networks.
+						</figcaption>  
+					</figure>
+				</a>
+				<a href="#" role="#" aria-labelledby="fig5">
+					<figure id= "fig5" class="site-container__figureFive">  
+						<img src="/dist/img/computer5" alt="man-sitting-infront-of-computer">
+						<figcaption><span>wow site</span>
+							Dynamically procrastinate B2C users after installed base benefits.
+						</figcaption>  
+					</figure>
+				</a>
+				<a href="#" role="#" aria-labelledby="fig6" >
+					<figure id= "fig6" class="site-container__figureSix">  
+						<img src="/dist/img/computer6" alt="computer-image	">
+						<figcaption><span>beautiful site</span>
+							Dramatically visualize customer directed convergence without revolutionary ROI.
+						</figcaption>  
+					</figure>
+				</a>
 
-            <section class="innovations-container">
-				<div>
-					<label for="immersive-innovations">
-						Let's collaborate on immersive immersive-innovations
-						
-					</label>
-					<p>You need to dynamically connect your low hanging fruit to increase your driver velocity.</p>
-					<button type="submit">get in touch</button>
-				</div>	
+				
+                
+                
+                
+                
+                
+                
 			</section>
+            <section class="projects-container__web">
+				
+				<a href="#" class="projects">
+					<figure>
+						<h2>app design</h2>
+						<span class="prjects-a">view projects <span class="arrow" aria-hidden="true">></span></span>
+					</figure>
+				</a>
+				<a href="#" class="projects">
+					<figure>
+						<h2>graphic design</h2>
+						<span class="prjects-a">view projects <span class="arrow" aria-hidden="true">></span></span>
+					</figure>
+				</a>		
+		</section>
+
+		<section class="innovations-container" role="#" aria-labelledby="contact">
+			<div id="contact">
+				<h2 for="immersive-innovations">
+					Let's collaborate on immersive immersive-innovations
+					
+				</h2>
+				<p>You need to dynamically connect your low hanging fruit to increase your driver velocity.</p>
+				
+			</div>
+			<button type="submit">get in touch</button>	
+		</section>
         </main>
 		<footer class="footer">
 			<div class="footer-container">
-				<figure class="footer-container__img">
-					<img src="/dist/img/Group -6.png" alt="big-top-logo">
-					<figcaption>big top</figcaption>
-				</figure>
-				<ul class="footer-container__ul">
-					<li><a href="">about us</a></li>
-					<li><a href="">serivce</a></li>
-					<li><a href="">contact</a></li>	
-				</ul>
-				<div class="footer-container__location footer-info">
-					<h4>Big Top Central Office</h4>
-					<li>812 Lambert Drive</li>
-					<li>Atlana, Georgia 30324</li>
+				<div class="footer-container__flex">
+					<figure class="footer-container__img">
+						<img src="/dist/img/Group -6.png" alt="big-top-logo">
+						<figcaption>big top</figcaption>
+					</figure>
+					<div role="#" aria-labelledby="menu" class="footer-menu">
+						<nav id="menu" aria-label="menu">
+							<ul class="footer-container__ul">
+								<li><a href="">about us</a></li>
+								<li><a href="">service</a></li>
+								<li><a href="">contact</a></li>	
+							</ul>
+						</nav>
+					</div>
 				</div>
-				<div class="footer-container__contact footer-info">
-					<h4>Contact Us (Central Office)</h4>
-					<li>P : +1 404-477-6700</li>
-					<li>M : contact@example.com</li>
+				<div div class="footer-container__flex">
+					<div class="contact">
+						<div class="footer-container__location footer-info">
+							<h4>Big Top Central Office</h4>
+							<li>812 Lambert Drive</li>
+							<li>Atlana, Georgia 30324</li>
+						</div>
+						<div class="footer-container__contact footer-info">
+							<h4>Contact Us (Central Office)</h4>
+							<li>P : +1 404-477-6700</li>
+							<li>M : contact@example.com</li>
+						</div>
+					</div>
+					
+					<div role="#" aria-labelledby="social" class="footer-social">
+						<nav id="social" aria-label="social-media">
+							<ul class="footer-container__socials">
+								<li><a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#" aria-label="pinterest"><i class="fab fa-pinterest"></i></a></li>
+								<li><a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</nav>
+					</div>	
 				</div>
-				<ul class="footer-container__socials">
-					<li aria-label="facebook"><i class="fab fa-facebook-square"></i></li>
-					<li aria-label="youtube"><i class="fab fa-youtube"></i></li>
-					<li aria-label="twitter"><i class="fab fa-twitter"></i></li>
-					<li aria-label="pinterest"><i class="fab fa-pinterest"></i></li>
-					<li aria-label="instagram"><i class="fab fa-instagram"></i></li>
-				</ul>
+				
+				
+				
+					
 			</div>
-			
-
 		</footer>
 		
 
