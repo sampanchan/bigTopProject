@@ -41,8 +41,6 @@ body {
 /* 2. Content ================================= */
 header{
 	background: white;
-	// margin: 0 auto;
-	// padding: 0;
 	width: 100%;
 	height:9vh;
 	position: relative;
@@ -50,7 +48,6 @@ header{
 	
 	.logo{
 		width: 1.5em;
-		// margin: 0 auto;
 		margin-left:10px;
 		
 		
@@ -168,6 +165,7 @@ header{
 			visibility: hidden;
 			@include mixins.bp-medium{
 				overflow: visible;
+				visibility: visible;
 				top: 35%;
     			right: 100%;
 				width: 60vw;
@@ -354,10 +352,12 @@ header{
 			@include mixins.bp-medium{
 				grid-column: 1/7;
 				justify-self: center;
+				margin-left: 1em;
 			}
 			@include mixins.bp-large{
 				font-size: 3em;
 				grid-column: 5/9;
+				margin-left: unset;
 				justify-self: center;
 			}
 		}
@@ -724,6 +724,7 @@ main{
 		@include mixins.bp-medium{
 			flex-direction: row;
 			flex-wrap: wrap;
+			margin: 2em;
 		}
 		
 		a{
